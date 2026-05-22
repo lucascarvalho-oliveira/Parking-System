@@ -148,25 +148,22 @@ CREATE TABLE veiculo(
 idVeiculo INT PRIMARY KEY AUTO_INCREMENT,
 placa VARCHAR(45) NOT NULL UNIQUE,
 cor VARCHAR(45) NOT NULL,
-modelo VARCHAR(10) NOT NULL,
+modelo VARCHAR(45) NOT NULL,
 tipo_motor VARCHAR(20) NOT NULL,
 tipo_veiculo VARCHAR(20) NOT NULL,
-idPessoa_fk INT,
+idPessoa_fk INT, 
 
-FOREIGN KEY (idPessoa_fk)
-REFERENCES pessoa(idPessoa)
-ON DELETE CASCADE
+FOREIGN KEY (idPessoa_fk) REFERENCES pessoa(idPessoa) ON DELETE CASCADE
 );
 
 CREATE TABLE estadia(
 idEstadia INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 data_entrada DATETIME(0) NOT NULL,
 data_saida DATETIME(0),
+valor_pago DECIMAL(10, 2),
 idVeiculo_fk INT,
 
-FOREIGN KEY (idVeiculo_fk)
-REFERENCES veiculo(idVeiculo)
-ON DELETE CASCADE
+FOREIGN KEY (idVeiculo_fk) REFERENCES veiculo(idVeiculo) ON DELETE CASCADE
 );
 ```
 
