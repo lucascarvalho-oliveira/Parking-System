@@ -23,7 +23,7 @@ public class CadastroController {
             System.out.println("================= Informação do cliente =================");
             System.out.println("Nome do cliente:");
             String nome = sc.nextLine().toUpperCase();
-            System.out.println("Telefone de contado:");
+            System.out.println("Telefone de contado. (DD)9.XXXX-XXXX:\n");
             String telefone = sc.nextLine().trim();
             System.out.println();
 

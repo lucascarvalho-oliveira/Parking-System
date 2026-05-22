@@ -17,7 +17,7 @@ public class PessoaService {
         }
 
         String telefone = pessoa.getTelefone();
-        if(telefone == null || telefone.length() != 11){
+        if(telefone == null || telefone.length() == 15){
             throw new IllegalArgumentException("Telefone invalido");
         }
 
